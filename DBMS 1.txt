@@ -10,9 +10,25 @@ Pincode number(6),
 Bal_Due number(10,2) 
 )
 
+Create table Product_Master 
+( 
+Product_no varchar(6), 
+Description varchar(20), 
+Profit_percentage number(6), 
+Unit_Measure varchar(10), 
+Qty_On_Hand number(6), 
+Reorder _Lvl number(6), 
+Sell_Price number(7,2), 
+Cost_Price number(7,2) 
+)
  Alter table Client_Master add DOB date
 
  Alter table Client_Master modify Client_no number
 
 Alter table Client_Master Drop column DOB 
+
+ALTER table Product_Master rename column Sell_Price to SellPrice
+ALTER table Product_Master rename to PRODUCT_MASTER
+
 truncate table Client_Master
+truncate table ProductMaster
