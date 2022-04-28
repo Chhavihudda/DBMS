@@ -1,0 +1,35 @@
+ CREATE TABLE EMPLOYEE (
+	 Empcode VARCHAR(2),
+	 Empname VARCHAR2(15)
+	 )
+	 INSERT INTO EMPLOYEE VALUES('E1','001Rajkumar');
+	 INSERT INTO EMPLOYEE VALUES('E2','Ramkumar002');
+	 INSERT INTO EMPLOYEE VALUES('E3','Ravikumar003');
+	 SELECT * FROM EMPLOYEE;
+	 SELECT Empcode,  REPLACE(REPLACE(REPLACE(REPLACE(Empname,'0',''),'1',''),'2',''),'3','')Empname FROM EMPLOYEE;
+
+
+ CREATE TABLE stud1 (
+	 firstname VARCHAR(15),
+	 lastname VARCHAR2(15)
+	 )
+	 INSERT INTO stud1  VALUES('Pankaj','Tiwari');
+	 INSERT INTO stud1  VALUES('Ashok','Sharma');
+	  INSERT INTO stud1  VALUES('Arun','Gupta');
+		 SELECT * FROM stud1 ;
+		 SELECT CONCAT ( firstname,lastname) Name FROM stud1
+		 		 SELECT CONCAT ( lastname,firstname) Name FROM stud1
+
+
+
+ CREATE TABLE stud3 (
+	 firstname VARCHAR(15),
+	 middlename VARCHAR(15),
+	 lastname VARCHAR2(15)
+	 )
+	 INSERT INTO stud3  VALUES('Pankaj','Kumar','Tiwari');
+	 INSERT INTO stud3  VALUES('Ashok','Kumar','Sharma');
+	  INSERT INTO stud3  VALUES('Arun','Kumar','Sharma');
+		 SELECT * FROM stud3 ;
+		 SELECT CONCAT ( firstname,middlename,lastname) as Name FROM stud3
+		
