@@ -1,36 +1,7 @@
-CREATE TABLE ORDERS(
-Ord_no number(5),
-Purch_amt number(5,2),
-Ord_Date DATE,
-Customer_id number(4),
-Salesman_id number (4)
-)
-INSERT INTO ORDERS VALUES (7001,150.5,20121005,3005,5002);
-INSERT INTO ORDERS VALUES (7009,270.65,,3001,5005);
-INSERT INTO ORDERS VALUES (7002,65.26,,3002,5001);
-INSERT INTO ORDERS VALUES (7004,110.5,,3009,5003);
-INSERT INTO ORDERS VALUES (7007,948.5,,3005,5002);
-INSERT INTO ORDERS VALUES (7005,2400.6,,3007,5001);
-INSERT INTO ORDERS VALUES (7008,5760,,3002,5001);
-INSERT INTO ORDERS VALUES (7001,150.5,,3005,5002);
-INSERT INTO ORDERS VALUES (7001,150.5,,3005,5002);
-INSERT INTO ORDERS VALUES (7001,150.5,,3005,5002);
-INSERT INTO ORDERS VALUES (7001,150.5,,3005,5002);
-INSERT INTO ORDERS VALUES (7001,150.5,,3005,5002);
 
-
-
-
-INSERT INTO ORDERS VALUES (7001,150.5,to_date('2012-10-05','yyyy-mm-dd'),3005,5002);
-INSERT INTO ORDERS VALUES (7009,270.65,to_date('2012-09-10','yyyy-mm-dd'),3001,5005);
-INSERT INTO ORDERS VALUES (7002,65.26,to_date('2012-10-05','yyyy-mm-dd'),3002,5001);
-INSERT INTO ORDERS VALUES (7004,110.5,to_date('2012-08-17','yyyy-mm-dd'),3009,5003);
-INSERT INTO ORDERS VALUES (7007,948.5,to_date('2012-09-10','yyyy-mm-dd'),3005,5002);
-INSERT INTO ORDERS VALUES (7005,2400.6,to_date('2012-07-27','yyyy-mm-dd'),3007,5001);
-INSERT INTO ORDERS VALUES (7008,5760,to_date('2012-09-10','yyyy-mm-dd'),3002,5001);
 
 CREATE TABLE SALESMAN(
-Salesman_id number (4) primary key,
+Salesman_id number (6) primary key,
 Name VARCHAR (20),
 City VARCHAR(10),
 Commission NUMBER(5,2)
@@ -43,11 +14,11 @@ INSERT INTO SALESMAN VALUES (5007,'Paul Adam','Rome',0.13);
 INSERT INTO SALESMAN VALUES (5003,'Lauson Hen','San Jose',0.12);
 
 CREATE TABLE CUSTOMER(
-Customer_id number(4) primary key,
+Customer_id number(6) primary key,
 Cust_name VARCHAR(20),
 City VARCHAR(10),
-Grade number (4),
-Salesman_id number (4)  references SALESMAN(Salesman_id)
+Grade number (6),
+Salesman_id number (6)  references SALESMAN(Salesman_id)
 )
 INSERT INTO CUSTOMER VALUES (3002,'Nick Rimando','New York',100, 5001);
 INSERT INTO CUSTOMER VALUES (3007,'Brad Davis','New York',200, 5001);
@@ -60,10 +31,10 @@ INSERT INTO CUSTOMER VALUES (3001,'Brad Guzan','London',100, 5005);
 
 CREATE TABLE ORDERS1(
 Ord_no number(7),
-Purch_amt number(5,2),
+Purch_amt number(7,3),
 Ord_Date DATE,
-Customer_id number(4),
-Salesman_id number (4)
+Customer_id number(6),
+Salesman_id number (6)
 )
 INSERT INTO ORDERS1 VALUES (70001,150.5,to_date('2012-10-05','yyyy-mm-dd'),3005,5002);
 INSERT INTO ORDERS1 VALUES (70009,270.65,to_date('2012-09-10','yyyy-mm-dd'),3001,5005);
